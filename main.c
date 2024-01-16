@@ -88,3 +88,19 @@ void ingresarAlumnos(struct Alumno *alumnos, int numAlumnos) {
         scanf("%f", &alumnos[i].promedio);
     }
 }
+void mostrarAlumnos(struct Alumno *alumnos, int numAlumnos) {
+    printf("\nInformación de los alumnos ingresados:\n");
+
+    for (int i = 0; i < numAlumnos; i++) {
+        printf("\nAlumno #%d\n", i + 1);
+        printf("Matrícula: %d\n", alumnos[i].matricula);
+        printf("Nombre: %s\n", alumnos[i].nombre);
+        printf("Dirección: %s\n", alumnos[i].direccion);
+        printf("Carrera: %s\n", alumnos[i].carrera);
+        printf("Promedio: %.2f\n", alumnos[i].promedio);
+    }
+}
+// en resumen este codigo tiene una estructura (alumnos) , se utilizo funciones para poder ingresar y mostrar los datos,
+// esto es por medio del menu donde aparecera esas funciones , en la funcion main se declaro las variables y el menu antes dicho 
+// tambien utilizamos un malloc esto para poder asignar una memoria y de ahi utilizamos el getchar para limpiar un bufer de entrada depues de que se lea matriculay se utilizo el fgets en donde aparece el strcspn
+// que es para poder eliminar el caracter de una nueva linea de las cadenas ingresadas.
